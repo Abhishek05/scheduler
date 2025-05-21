@@ -5,13 +5,18 @@ description = "kids-scheduler using crewAI"
 authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
-    "crewai[tools]>=0.119.0,<1.0.0",
+    "crewai>=0.119.0,<1.0.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
 ]
 
 [project.scripts]
 kickoff = "kids_scheduler.main:kickoff"
 run_crew = "kids_scheduler.main:kickoff"
 plot = "kids_scheduler.main:plot"
+api = "kids_scheduler.api:start"
 
 [build-system]
 requires = ["hatchling"]
