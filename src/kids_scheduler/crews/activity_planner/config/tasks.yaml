@@ -1,0 +1,70 @@
+analyze_requirements:
+  agent: curriculum_planner
+  description: >
+    Analyze requirements for a {kid_age}-year-old child's weekly schedule, considering:
+    - Preferred activities: {preferred_activities}
+    - Age-appropriate activity categories (academic, creative, physical)
+    - 1-hour daily time limit
+    - Need for 7-day coverage
+    - Balance between structured learning and entertainment
+  expected_output: >
+    A comprehensive analysis of weekly activity requirements that incorporates the child's
+    preferences while respecting time constraints and development needs.
+
+design_activity_pool:
+  agent: activity_specialist
+  description: >
+    Create a weekly pool of 1-hour activities customized for a {kid_age}-year-old child:
+    - Incorporate preferred activities: {preferred_activities}
+    - Include variety of activity types:
+      * Academic (math, reading, writing)
+      * Creative (music, art, crafts)
+      * Physical (exercise, dance, sports)
+      * Educational games and puzzles
+    - Ensure each activity fits within 1-hour timeframe
+    - Design variations for different days of the week
+  expected_output: >
+    Detailed list of age-appropriate, time-boxed activities for each day of the week,
+    with clear instructions and time allocations.
+
+optimize_schedule:
+  agent: schedule_optimizer
+  description: >
+    Create a balanced 7-day schedule considering:
+    - Distribution of preferred activities: {preferred_activities} across the week
+    - 1-hour daily time limit
+    - Age-appropriate attention spans for {kid_age}-year-old
+    - Variety in daily activities
+    - Logical progression through the week
+    - Optimal time slots for different activity types
+  expected_output: >
+    Structured 7-day schedule with daily 1-hour activity blocks, ensuring variety
+    and engagement throughout the week.
+
+create_progress_metrics:
+  agent: progress_tracker
+  description: >
+    Develop weekly tracking mechanisms for a {kid_age}-year-old child:
+    - Daily engagement metrics
+    - Weekly progress indicators
+    - Balance of preferred activities: {preferred_activities}
+    - Time management tracking
+    - Skill development milestones
+    - Activity completion success rates
+  expected_output: >
+    Comprehensive weekly progress tracking framework with daily checkpoints
+    and success metrics.
+
+review_and_adjust:
+  agent: curriculum_planner
+  description: >
+    Review and finalize the 7-day schedule:
+    - Verify age-appropriateness for {kid_age}-year-old
+    - Confirm inclusion and balance of preferred activities: {preferred_activities}
+    - Validate 1-hour time limits
+    - Ensure educational value and engagement
+    - Check weekly progression logic
+    - Review progress tracking integration
+  expected_output: >
+    Final approved 7-day schedule with implementation guidelines and
+    recommendations for adjustments based on weekly progress.
